@@ -19,12 +19,12 @@ git clone https://github.com/MurraySBennett/melanoma-identification.git
 Create and activate your python virtual environment however you like to do it. Or skip to the final code-block of this section to install the requirements globally if you like the thrill of potentially conflicting packages/versions. To each their own.
 
 ```
-cd melanoma-identification
+cd melanoma-identification 
 python -m venv mel_venv
 
 # then, depending on your system, activate it
 # mac/Linux
-source .mel_venv/bin/activate
+source ../mel_venv/bin/activate #LH Remove: source .mel_venv/bin/activate
 
 # PowerShell
 .mel_venv\Scripts\Activate.ps1
@@ -36,21 +36,24 @@ source .mel_venv/bin/activate
 
 Finally, install requirements, the appropriate file is located within the 'pwc' directory, so can be called from within that directory.
 
+# LH There was an Issue in the requirments install now fixed, see requirements.txt
 ```
 cd pwc
 pip install -r requirements.txt
 cd ..
 ```
 
+
 ## Computer vision estimation
+
 
 ### Image segmentation
 
 We will start off segmenting the images - this involves (the attempt of) identifying the lesion within each image and saving the binary mask to the images/masks directory. These masks are used for shape and colour estimation in the following section.
 
 From within the melanoma-identification directory:
-
 ```
+export PYTHONPATH="$PWD" 
 python -m pwc.cv.00_segmentation.image_segmentation
 ```
 

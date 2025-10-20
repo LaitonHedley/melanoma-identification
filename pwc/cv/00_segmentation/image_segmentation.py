@@ -7,7 +7,7 @@ import concurrent.futures
 import cv2 as cv
 from time import perf_counter
 
-from ...config import PATHS
+from ...config import PATHS #LH: Issue here... no config .py
 
 from .image_processes import process_img
 from .file_management import save_img, read_img
