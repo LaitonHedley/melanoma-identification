@@ -53,8 +53,9 @@ We will start off segmenting the images - this involves (the attempt of) identif
 
 From within the melanoma-identification directory:
 ```
+
 export PYTHONPATH="$PWD" 
-python -m pwc.cv.00_segmentation.image_segmentation
+python -m pwc.cv.00_segmentation.image_segmentation #Runs but doesn't do anything, no images under the images, just ISIC-database, attribution.txt files
 ```
 
 ### Shape and colour estimates
